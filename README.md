@@ -6,9 +6,19 @@ A Linux desktop app for DaVinci Resolve creators. Combines AI image upscaling vi
 
 ## Requirements
 
-- Linux x86_64
+- Arch Linux x86_64
 - NVIDIA GPU with CUDA (falls back to CPU if not available)
-- `ffmpeg` installed (`sudo pacman -S ffmpeg` on Arch)
+- Python 3.12
+- `ffmpeg`
+
+## Setup
+
+Install ffmpeg and Python 3.12 (Python 3.12 is from the AUR):
+
+```bash
+sudo pacman -S ffmpeg
+paru -S python312
+```
 
 ---
 
@@ -27,10 +37,13 @@ cd ResolveMediaTool
 
 ```bash
 python3.12 -m venv .venv
-source .venv/bin/activate  # or activate.fish for fish shell
+source .venv/bin/activate.fish  # fish shell
+# or: source .venv/bin/activate  # bash/zsh
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 pip install basicsr realesrgan facexlib gfpgan opencv-python-headless Pillow numpy PyQt6 pyinstaller
 ```
+
+> **Note:** You must have the venv active before running any `pip` or `pyinstaller` commands.
 
 3. Build the executable:
 
