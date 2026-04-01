@@ -100,18 +100,6 @@ Launch from your app menu or run directly:
 
 ---
 
-## Building from Source
-
-```bash
-python3.12 -m venv .venv
-source .venv/bin/activate  # or activate.fish for fish shell
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
-pip install basicsr realesrgan facexlib gfpgan opencv-python-headless Pillow numpy PyQt6 pyinstaller
-pyinstaller resolve-media-tool.spec
-./install.sh
-```
-
----
 
 ## Output Files
 
