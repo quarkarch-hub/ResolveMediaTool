@@ -1,6 +1,9 @@
 .venv/
 dist/
 build/
+.claude/
+*.tar.gz
+*.zip
 __pycache__/
 *.pyc
 *.pyo
