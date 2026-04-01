@@ -1,0 +1,10 @@
+PyQt6
+torch
+torchvision
+basicsr
+realesrgan
+facexlib
+gfpgan
+numpy
+opencv-python-headless
+Pillow

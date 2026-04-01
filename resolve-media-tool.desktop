@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Resolve Media Tool
+Comment=Upscale images and convert media for DaVinci Resolve
+Exec=/home/quark/Projects/resolve-media-tool/dist/resolve-media-tool/resolve-media-tool
+Icon=resolve-media-tool
+Terminal=false
+Type=Application
+Categories=AudioVideo;Video;Graphics;

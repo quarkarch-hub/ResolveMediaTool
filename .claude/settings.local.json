@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /home/quark/Projects/resolve-media-tool/.venv/lib/python3.12/site-packages -name *.so -path */PyQt6/*)",
+      "Bash(/dev/null find:*)"
+    ]
+  }
+}
