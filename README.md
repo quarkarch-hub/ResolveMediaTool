@@ -14,17 +14,37 @@ A Linux desktop app for DaVinci Resolve creators. Combines AI image upscaling vi
 
 ## Installation
 
-1. Clone the repo and run the install script:
+The executable must be built from source due to the size of the PyTorch dependency (~2GB).
+
+1. Clone the repo:
 
 ```bash
-git clone https://github.com/your-username/resolve-media-tool.git
-cd resolve-media-tool
+git clone https://github.com/quarkarch-hub/ResolveMediaTool.git
+cd ResolveMediaTool
+```
+
+2. Create a Python 3.12 virtual environment and install dependencies:
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate  # or activate.fish for fish shell
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+pip install basicsr realesrgan facexlib gfpgan opencv-python-headless Pillow numpy PyQt6 pyinstaller
+```
+
+3. Build the executable:
+
+```bash
+pyinstaller resolve-media-tool.spec
+```
+
+4. Install to your app launcher:
+
+```bash
 ./install.sh
 ```
 
-This installs the app icon and adds Resolve Media Tool to your application launcher.
-
-2. Launch from your app launcher or run directly:
+Launch from your app menu or run directly:
 
 ```bash
 ./dist/resolve-media-tool/resolve-media-tool
